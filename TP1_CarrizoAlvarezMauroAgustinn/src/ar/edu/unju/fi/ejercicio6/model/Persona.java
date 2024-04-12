@@ -1,18 +1,26 @@
 package ar.edu.unju.fi.ejercicio6.model;
-import java.time.LocalDate;
 
-import javax.swing.JOptionPane;
+import java.util.Calendar;
+
 public class Persona {
 
 private String dni;
 private String nombre;
 private int fechaNa;
 private String provincia;
+private int fechaActual = Calendar.DAY_OF_MONTH;
 
-public void leerfecha() {
-fechaNa = Integer.parseInt(JOptionPane.showInputDialog("Ingrese fecha de nacimiento: "));
-
+public void leerFecha() {
+int edad = Math.abs(fechaNa - fechaActual); 
+System.out.print("La edad es: "+ edad);
 }
+
+
+
+
+
+
+
 
 //METODOS ACCESORES
 public String getDni() {
