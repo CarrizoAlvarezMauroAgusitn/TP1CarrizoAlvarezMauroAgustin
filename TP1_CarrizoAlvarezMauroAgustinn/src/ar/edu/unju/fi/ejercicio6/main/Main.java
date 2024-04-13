@@ -17,7 +17,7 @@ public class Main {
 		
 System.out.print("Ingrese DNI: ");
 //persona1.setDni(scanner.nextInt(););
-//int dni = scanner.nextInt();
+int dni = scanner.nextInt();
 System.out.print("Ingrese nombre: ");
 String nombre = scanner.nextLine();
 scanner.nextLine();

@@ -10,10 +10,13 @@ private int fechaNa;
 private String provincia;
 private int fechaActual = Calendar.DAY_OF_MONTH;
 
-public void leerFecha() {
-int edad = Math.abs(fechaNa - fechaActual); 
-System.out.print("La edad es: "+ edad);
-}
+
+
+
+//public void leerFecha() {
+//int edad = Math.abs(fechaNa - fechaActual); 
+//System.out.print("La edad es: "+ edad);
+//}
 
 
 
@@ -56,10 +59,16 @@ public void setProvincia(String provincia) {
 }
 
 
-@Override
-public String toString() {
-	return "Persona [dni=" + dni + ", nombre=" + nombre + ", fechaNa=" + fechaNa + ", provincia=" + provincia + "]";
+public void leerFecha() {
+int edad = Math.abs(fechaNa - fechaActual); 
+System.out.print("La edad es: "+ edad);
+}
+
+
+//@Override
+//public String toString() {
+	//return "Persona [dni=" + dni + ", nombre=" + nombre + ", fechaNa=" + fechaNa + ", provincia=" + provincia + "]";
 }
 	
-}
+//}
 
