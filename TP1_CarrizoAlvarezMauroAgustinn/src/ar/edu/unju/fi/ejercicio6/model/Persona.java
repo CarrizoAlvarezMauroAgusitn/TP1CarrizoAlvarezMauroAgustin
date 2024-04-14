@@ -1,36 +1,29 @@
 package ar.edu.unju.fi.ejercicio6.model;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 public class Persona {
 
-private String dni;
+private Integer dni;
 private String nombre;
-private int fechaNa;
+private LocalDate FechaNac;
 private String provincia;
 private int fechaActual = Calendar.DAY_OF_MONTH;
 
+public Persona() {
+	
+}
 
 
 
-//public void leerFecha() {
-//int edad = Math.abs(fechaNa - fechaActual); 
-//System.out.print("La edad es: "+ edad);
-//}
-
-
-
-
-
-
-
-
-//METODOS ACCESORES
-public String getDni() {
+public Integer getDni() {
 	return dni;
 }
 
-public void setDni(String dni) {
+public void setDni(Integer dni) {
 	this.dni = dni;
 }
 
@@ -42,12 +35,12 @@ public void setNombre(String nombre) {
 	this.nombre = nombre;
 }
 
-public int getFechaNa() {
-	return fechaNa;
+public LocalDate getFechaNac() {
+	return FechaNac;
 }
 
-public void setFechaNa(int fechaNa) {
-	this.fechaNa = fechaNa;
+public void setFechaNac(LocalDate fechaNac) {
+	FechaNac = fechaNac;
 }
 
 public String getProvincia() {
@@ -58,17 +51,84 @@ public void setProvincia(String provincia) {
 	this.provincia = provincia;
 }
 
+public int getFechaActual() {
+	return fechaActual;
+}
 
-public void leerFecha() {
-int edad = Math.abs(fechaNa - fechaActual); 
-System.out.print("La edad es: "+ edad);
+public void setFechaActual(int fechaActual) {
+	this.fechaActual = fechaActual;
+}
+public Persona(Integer dni, String nombre, LocalDate fechaNac, String provincia, int fechaActual) {
+	super();
+	this.dni = dni;
+	this.nombre = nombre;
+	FechaNac = fechaNac;
+	this.provincia = provincia;
+	this.fechaActual = fechaActual;
 }
 
 
-//@Override
-//public String toString() {
-	//return "Persona [dni=" + dni + ", nombre=" + nombre + ", fechaNa=" + fechaNa + ", provincia=" + provincia + "]";
+
+@Override
+public String toString() {
+	return "Persona [dni=" + dni + ", nombre=" + nombre + ", FechaNac=" + FechaNac + ", provincia=" + provincia + "]";
 }
+
+
+public void calcularEdad() {
+
+
+	LocalDate fechaActual = LocalDate.now();
+	Period period = Period.between(FechaNac, fechaActual);
+	//System.out.printf("La edad es: %s años, %s meses y %s dias,period.getYear();	"
+	System.out.printf("La edad es: %s años, %s meses y %s días",
+	                period.getYears(), period.getMonths(), period.getDays());
+
+
+}
+public void calculoMayor() {
+	//boolean bandera=false; 
+	LocalDate fechaActual = LocalDate.now();
+	Period period = Period.between(FechaNac, fechaActual);
+	//System.out.printf("La edad es: %s años, %s meses y %s dias,period.getYear();	"
+	//System.out.printf("La edad es: %s años, %s meses y %s días",
+	  //              period.getYears(), period.getMonths(), period.getDays());
+
+int edad = period.getYears();
+if ( edad >= 18) {	
+	boolean bandera = true;
 	
-//}
+	System.out.println(bandera);
+	//else  {
+///	boolean bandera = false;
+//System.out.println("es menor");
+	}	
+		
+
+}
+public void mostrarDatos() {
+	LocalDate fechaActual = LocalDate.now();
+	Period period = Period.between(FechaNac, fechaActual);
+	//System.out.printf("La edad es: %s años, %s meses y %s dias,period.getYear();	"
+	//System.out.printf("La edad es: %s años, %s meses y %s días",
+	  //              period.getYears(), period.getMonths(), period.getDays());
+	int edad = period.getYears();
+if 	( edad <= 18) {	
+	System.out.println("Persona dni=" + dni + ", nombre=" + nombre + ", FechaNac=" + FechaNac + ", provincia=" + provincia + "  "+ "Es menor de edad");
+}
+else {
+	System.out.println("Persona dni=" + dni + ", nombre=" + nombre + ", FechaNac=" + FechaNac + ", provincia=" + provincia + "  "+ "Es mayor de edad");
+}
+
+
+}
+}
+
+
+
+
+
+
+
+
 

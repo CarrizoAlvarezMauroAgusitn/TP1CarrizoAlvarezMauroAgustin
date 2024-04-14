@@ -1,46 +1,54 @@
 package ar.edu.unju.fi.ejercicio6.main;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
 import ar.edu.unju.fi.ejercicio6.model.Persona;
 
 public class Main {
 
+	
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Persona edad = new Persona ();
+	
 		Persona persona1 = new Persona();		
-		int fechaActual = Calendar.DAY_OF_MONTH;
+		Persona persona2 = new Persona();
 		Scanner scanner = new Scanner(System.in);
 		
-System.out.print("Ingrese DNI: ");
-//persona1.setDni(scanner.nextInt(););
-int dni = scanner.nextInt();
-System.out.print("Ingrese nombre: ");
-String nombre = scanner.nextLine();
+System.out.println("Ingrese DNI: ");
+
+Integer dni = scanner.nextInt();
+System.out.println("Ingrese nombre: ");
+String nombre = scanner.next();
 scanner.nextLine();
+System.out.print("Ingrese fecha de nacimento:  ");
+String fechaNacString = scanner.nextLine();
+//SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+LocalDate FechaNac = LocalDate.parse(fechaNacString,formatter);
 
-//System.out.print("Ingrese Fecha de nacimento (dd/mm/yy): ");
-//String fechaNacString = scanner.nextLine();
-//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yy");
-//LocalDate fechaNac = LocalDate.parse(fechaNacString,formatter);
-//System.out.print(formatter.format(fechaNac));
-
-System.out.print("Ingrese Fecha de nacimento: ");
-String fechaString = scanner.next();
-DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-LocalDate fecha = LocalDate.parse(fechaString, formatoFecha);
-	
-//System.out.print("la fecha es: " + fecha);
 
 System.out.print("Ingrese Provincia: ");
 String provincia = scanner.nextLine();
-scanner.nextLine();
+//scanner.nextLine();
 
-	//Persona persona1 = new Persona();
-	//persona1.set
+persona1.setDni(dni);
+persona1.setNombre(nombre);
+persona1.setFechaNac(FechaNac);
+persona1.setProvincia(provincia);
+
+persona1.calcularEdad();	
+
+
+persona1.calculoMayor();	
+
+persona1.mostrarDatos();
 	
 	}
 }
