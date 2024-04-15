@@ -69,6 +69,21 @@ public Persona(Integer dni, String nombre, LocalDate fechaNac, String provincia,
 
 
 
+
+
+
+
+
+public Persona(Integer dni, String nombre, LocalDate fechaNac ) {
+	
+	this.dni = dni;
+	this.nombre = nombre;
+	FechaNac = fechaNac;
+	this.provincia = "Jujuy";
+}
+
+
+
 @Override
 public String toString() {
 	return "Persona [dni=" + dni + ", nombre=" + nombre + ", FechaNac=" + FechaNac + ", provincia=" + provincia + "]";
