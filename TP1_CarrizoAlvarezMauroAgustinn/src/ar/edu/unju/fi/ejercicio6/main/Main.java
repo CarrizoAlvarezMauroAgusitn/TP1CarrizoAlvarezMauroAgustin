@@ -35,7 +35,7 @@ DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 LocalDate FechaNac = LocalDate.parse(fechaNacString,formatter);
 
 
-System.out.print("Ingrese Provincia: ");
+//System.out.print("Ingrese Provincia: ");
 String provincia = scanner.nextLine();
 //scanner.nextLine();
 
