@@ -6,7 +6,7 @@ public class EstructuraControlFor {
 		// TODO Auto-generated method stub
 		int num;
 		Scanner teclado = new Scanner(System.in);	
-	//System.out.println("Ingrese un numero;");
+	System.out.println("Ingrese un numero;");
 		num= teclado.nextInt();
 	
 	if(num >= 1 && num <=9) {
