@@ -13,7 +13,7 @@ public class Main {
 		String nombre = scanner.nextLine();
 		System.out.println("Ingrese el legajo del empleado: ");
 		int legajo = scanner.nextInt();
-		System.out.println("Ingrese el salario del empleado: ");
+		//System.out.println("Ingrese el salario del empleado: ");
 		double salario = scanner.nextDouble();
 Empleado empleado = new Empleado(nombre,legajo, salario);
 	
