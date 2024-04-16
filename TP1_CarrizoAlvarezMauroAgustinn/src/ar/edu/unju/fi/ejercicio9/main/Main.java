@@ -16,7 +16,7 @@ while (numProducto <=3) {
 System.out.println("Ingrese nombre: ");
 String nombre = scanner.next();
 scanner.nextLine();		
-//System.out.println("Ingrese codigo: ");
+System.out.println("Ingrese codigo: ");
 
 Integer codigo = scanner.nextInt();
 
