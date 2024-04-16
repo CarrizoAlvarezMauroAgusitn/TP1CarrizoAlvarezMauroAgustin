@@ -8,7 +8,7 @@ public class Variable {
 		byte n2=5;
 		byte n3=1;
 		byte n4=20;
-		byte n6=9;
+		byte n5=9;
 		double promedio = (n1 + n2 + n3 + n4 + n5 )/5.0;
 		System.out.println("el promedio es: " + promedio ); 		
 	
