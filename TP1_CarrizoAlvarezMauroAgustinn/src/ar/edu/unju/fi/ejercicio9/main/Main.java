@@ -8,9 +8,7 @@ import ar.edu.unju.fi.ejercicio9.model.Producto;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//Persona persona1 = new Persona();		
-		//Persona persona2 = new Persona();
+		
 		Scanner scanner = new Scanner(System.in);
 		Producto prodcuto1 = new Producto();
 int numProducto = 1;

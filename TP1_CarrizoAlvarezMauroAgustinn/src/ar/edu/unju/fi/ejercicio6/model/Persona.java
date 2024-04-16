@@ -105,9 +105,7 @@ public void calculoMayor() {
 	//boolean bandera=false; 
 	LocalDate fechaActual = LocalDate.now();
 	Period period = Period.between(FechaNac, fechaActual);
-	//System.out.printf("La edad es: %s años, %s meses y %s dias,period.getYear();	"
-	//System.out.printf("La edad es: %s años, %s meses y %s días",
-	  //              period.getYears(), period.getMonths(), period.getDays());
+	
 
 int edad = period.getYears();
 if ( edad >= 18) {	

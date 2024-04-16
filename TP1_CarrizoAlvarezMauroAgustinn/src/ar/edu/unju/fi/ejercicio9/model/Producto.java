@@ -18,27 +18,12 @@ public Producto(String nombre, int codigo, double precio, int descuento) {
 	
 public Producto () {
 }	
-	
-	
-//public double calcularDescuento (double precio, double decuento)	{
-//int porciento = 100; 
-//double precioFinal =(descuento * precio)/(.100);
-	//this.descuento=descuento;
-	//this.descuento = descuento;
-	//double descuentoFinal =(descuento/100)*precio; 
-	//double precioFinal =precio-descuentoFinal;
-	//System.out.println("el precio final es: " + precioFinal);
-	//return precioFinal;
-//}	
+
 	
 public void calcularDescuento (double precio, double descuento)	{
-	//int porciento = 100; 
-	//double precioFinal =(descuento * precio)/(.100);
-		//this.descuento=descuento;
-		//this.descuento = descuento;
+	
 		double descuentoFinal =(descuento/100)*precio; 
 		double precioFinal =precio-descuentoFinal;
 		System.out.println("el precio final es: " + precioFinal);
 }
 }
-//System.out.println("el precio final es: " + precioFinal);
