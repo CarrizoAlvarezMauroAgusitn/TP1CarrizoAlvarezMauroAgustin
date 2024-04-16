@@ -13,7 +13,7 @@ public class Main {
 		
 		
 	Scanner scanner = new Scanner (System.in);
-	System.out.println("Ingrese un numero entero: ");
+	//System.out.println("Ingrese un numero entero: ");
 	int n = scanner.nextInt();
 	CalculadoraEspecial  calculo = new CalculadoraEspecial() ;
 	
