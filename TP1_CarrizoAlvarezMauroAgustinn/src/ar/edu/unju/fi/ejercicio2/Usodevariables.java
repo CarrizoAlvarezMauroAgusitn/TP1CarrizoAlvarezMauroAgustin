@@ -18,7 +18,7 @@ public class Usodevariables {
 		System.out.println("altura: "+numeroFloat); 
 		System.out.println("precio: "+numeroDouble);
 		System.out.println("numero de telefono: "+numeroLong );
-		//System.out.println("el coseno es: "+coceno );
+		System.out.println("el coseno es: "+coceno );
 			
 		
 	}
