@@ -10,7 +10,7 @@ public static void main(String[] args) {
 	int a;
 	int fact =1 ;
 	Scanner teclado = new Scanner(System.in);	
-System.out.println("ingrese un numero");
+//System.out.println("ingrese un numero");
 	a= teclado.nextInt();
 int contador=a;
 if(a >= 0 && a <=10) {
