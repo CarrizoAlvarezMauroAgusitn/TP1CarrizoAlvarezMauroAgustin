@@ -18,9 +18,10 @@ public class Main {
 	public static void main(String[] args) {
 	
 		Persona persona1 = new Persona();		
-		Persona persona2 = new Persona();
+		//Persona persona2 = new Persona();
 		Scanner scanner = new Scanner(System.in);
-		
+int numPersonas = 1;
+while (numPersonas <= 2) {
 System.out.println("Ingrese DNI: ");
 
 Integer dni = scanner.nextInt();
@@ -49,6 +50,21 @@ persona1.calcularEdad();
 persona1.calculoMayor();	
 
 persona1.mostrarDatos();
+numPersonas++;	
+	}
+
+System.out.println("Ingrese DNI: ");
+
+Integer dni = scanner.nextInt();
+System.out.println("Ingrese nombre: ");
+String nombre = scanner.next();
+scanner.nextLine();
+System.out.print("Ingrese fecha de nacimento:  ");
+String fechaNacString = scanner.nextLine();
+//SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+LocalDate FechaNac = LocalDate.parse(fechaNacString,formatter);
+Persona persona2 = new Persona(dni, nombre, FechaNac);
 	
 	}
 }

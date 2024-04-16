@@ -59,7 +59,7 @@ public void setFechaActual(int fechaActual) {
 	this.fechaActual = fechaActual;
 }
 public Persona(Integer dni, String nombre, LocalDate fechaNac, String provincia, int fechaActual) {
-	super();
+	
 	this.dni = dni;
 	this.nombre = nombre;
 	FechaNac = fechaNac;
@@ -129,10 +129,10 @@ public void mostrarDatos() {
 	  //              period.getYears(), period.getMonths(), period.getDays());
 	int edad = period.getYears();
 if 	( edad <= 18) {	
-	System.out.println("Persona dni=" + dni + ", nombre=" + nombre + ", FechaNac=" + FechaNac + ", provincia=" + provincia + "  "+ "Es menor de edad");
+	System.out.println("Datos de la persona: dni = " + dni + ", nombre = " + nombre + ", FechaNac = " + FechaNac + ", provincia = " + provincia + "  "+ "   Es menor de edad");
 }
 else {
-	System.out.println("Persona dni=" + dni + ", nombre=" + nombre + ", FechaNac=" + FechaNac + ", provincia=" + provincia + "  "+ "Es mayor de edad");
+	System.out.println("Datos de la persona: dni = " + dni + ", nombre = " + nombre + ", FechaNac = " + FechaNac + ", provincia = " + provincia + "  "+ "   Es mayor de edad");
 }
 
 

@@ -7,7 +7,6 @@ private double salario;
 
 
 public Empleado(String noombre, Integer legajo, double salario) {
-	super();
 	this.noombre = noombre;
 	this.legajo = legajo;
 	this.salario = salario;
@@ -43,9 +42,30 @@ public void setSalario(double salario) {
 	this.salario = salario;
 }
 
-	
-public void calculoMinimo();{
-if (salrio >= 2000)
 
+public static final double SALARIO_MINIMO = 210000.00 ;
+public static final double AUMENTO = 20000.00;
+public void calculoMinimo() {
+
+if (salario <= SALARIO_MINIMO) {
+	this.salario = SALARIO_MINIMO ;	
+	 }
+else {
+	this.salario = salario;
+}
+}
+public void mostrarDatos() {
+
+System.out.println("Empleado Nombre=" + noombre + ", legajo=" + legajo + ", salario=" + salario  );
+}
+public void darAumento() {
+		if (salario <= SALARIO_MINIMO) {
+			salario = salario + AUMENTO;	
+		}
+		 
+	else {
+		this.salario = salario;
+		
+}
 }
 }
